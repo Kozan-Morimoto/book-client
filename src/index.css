@@ -1,3 +1,10 @@
+:root {
+  --dark-clay: #576F72;
+  --light-clay: #7D9D9C;
+  --wet-porcelain: #E4DCCF;
+  --dry-porcelain: #F0EBE3; 
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
