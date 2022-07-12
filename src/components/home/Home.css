@@ -1,3 +1,22 @@
-.home {
+.top {
+    height: 100%;
+}
+
+.main-poster {
+    display: block;
+    width: 100vw;
+    height: 500px;
+    margin: 0 auto;
+    background-color: var(--wet-porcelain);
+}
+
+.top-btn {
     position: relative;
+    margin-top: 30px;
+    float: right;
+    margin-right: 30px;
+    font-size: 35px;
+    color: var(--dark-clay);
+    font-family: var(--f-handwriting);
+    text-decoration: none;
 }

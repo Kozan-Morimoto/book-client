@@ -3,7 +3,7 @@
 }
 
 .bar {
-	background-color: var(--dark-clay);
+	background-color: var(--dry-porcelain);
 	top: 0;
 	height: 80px;
 	width: 100vw;
@@ -13,15 +13,15 @@
 }
 
 .logo {
-	color: var(--dry-porcelain);
+	color: var(--dark-clay);
 	font-size: 30px;
 	margin-left: 10px;
 }
 
 .toggle-a {
-    background-color: var(--dark-clay);
+    background-color: var(--dry-porcelain);
     border: none;
-	color: var(--dry-porcelain);
+	color: var(--dark-clay);
 	font-size: 20px;
 	margin-right: 20px;
 }
@@ -29,17 +29,18 @@
 .toggle-b {
     background-color: inherit;
     border: none;
-    color: var(--dark-clay);
+    color: var(--dry-porcelain);
     font-size: 30px;
     margin-left: 20px;
 }
 
 .nav {
 	height: 80px;
-	background-color: var(--dry-porcelain);
+	background-color: var(--dark-clay);
 	transform: translateY(-200%);
-	transition: transform ease 700ms;
+	transition: transform ease 400ms;
     display: block;
+	font-family: var(--f-sans);
 }
 
 .nav.active {
@@ -64,8 +65,6 @@
 	text-decoration: none;
 }
 
-.nav-item,
-:active,
-:visited {
-	color: var(--dark-clay);
+.nav-item, .nav-item :active, .nav-item :visited {
+	color: var(--dry-porcelain);
 }
