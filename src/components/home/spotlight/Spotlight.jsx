@@ -1,6 +1,6 @@
 import React from 'react'
 import './Spotlight.css'
-import kingsRespiteCover from '../../../images/kings-respite-cover.jpg'
+import kingsRespiteCover from '../../../assets/kings-respite-cover.jpg'
 
 function Spotlight() {
   return (
