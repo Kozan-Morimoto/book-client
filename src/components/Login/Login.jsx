@@ -3,14 +3,15 @@ import './Login.css'
 import Axios from 'axios'
 
 function Login() {
-	const [loginEmail, setLoginEmail] = useState('')
+	const [loginUsername, setLoginUsername] = useState('')
 	const [loginPassword, setLoginPassword] = useState('')
+	const [data, setData] = useState(null)
 
 	const login = () => {
 		Axios({
 			method: 'POST',
 			data: {
-				email: loginEmail,
+				username: loginUsername,
 				password: loginPassword,
 			},
 			withCredentials: true,
@@ -21,8 +22,22 @@ function Login() {
 		Axios({
 			method: 'GET',
 			withCredentials: true,
-			url: 'http://localhost:5000/getUser',
-		}).then((res) => console.log(res))
+			url: 'http://localhost:5000/user',
+		}).then((res) => {
+			console.log(res.data)
+			setData(res.data)
+		})
+	}
+
+	const logout = () => {
+		Axios({
+			method: 'POST',
+			withCredentials: true,
+			data: {
+				loggedIn: true
+			},
+			url: 'http://localhost:5000/logout'
+		}).then(res => console.log('Logged out'))
 	}
 
 	return (
@@ -30,14 +45,15 @@ function Login() {
 			<div className='login-register-greeting'>
 				<h1>Continue your legend.</h1>
 			</div>
-			<form action='/login' method='post'>
+
+			<div className='input-container'>
 				<div>
 					<input
 						type='text'
-						name='email'
-						id='email'
-						placeholder='Email'
-						onChange={(e) => setLoginEmail(e.target.value)}
+						name='username'
+						id='username'
+						placeholder='Username'
+						onChange={(e) => setLoginUsername(e.target.value)}
 						required
 					/>
 				</div>
@@ -53,14 +69,22 @@ function Login() {
 					/>
 				</div>
 
-				<button onClick={login}>
-					Login
-				</button>
-			</form>
+				<button onClick={login}>Login</button>
+			</div>
 			<div className='login-register-link'>
 				<a href='/register'>
 					<u>Register</u>
 				</a>
+			</div>
+
+			<div>
+				<button onClick={getUser}>Get user</button>
+				{data ? (
+					<div>
+						<h1>{data.username}</h1>
+						<button onClick={logout}>Logout</button>
+					</div>
+				) : null}
 			</div>
 		</div>
 	)

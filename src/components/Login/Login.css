@@ -14,7 +14,7 @@
     font-family: var(--f-handwriting);
 }
 
-.login-register form {
+.login-register .input-container {
     width: 290px;
     margin: 0 auto;
 }
@@ -45,6 +45,11 @@
     color: var(--dark-clay);
     font-family: var(--f-sans); /* change this later */
     font-size: 20px;
+}
+
+.login-register button:hover {
+    background-color: var(--dry-porcelain);
+    color: var(--light-clay);
 }
 
 .login-register button:hover {

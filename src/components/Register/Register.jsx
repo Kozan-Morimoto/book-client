@@ -4,19 +4,19 @@ import './Register.css'
 import Axios from 'axios'
 
 function Register() {
-	const [registerEmail, setRegisterEmail] = useState('')
+	const [registerUsername, setRegisterUsername] = useState('')
 	const [registerPassword, setRegisterPassword] = useState('')
 
 	const register = () => {
 		Axios({
 			method: 'POST',
 			data: {
-				email: registerEmail,
-				password: registerPassword,
+				username: registerUsername,
+				password: registerPassword
 			},
 			withCredentials: true,
 			url: 'http://localhost:5000/register',
-		}).then(res => console.log(res))
+		}).then((res) => console.log(res))
 	}
 
 	return (
@@ -24,14 +24,14 @@ function Register() {
 			<div className='login-register-greeting'>
 				<h1>Begin your legend.</h1>
 			</div>
-			<form action='/register'>
+			<div className='input-container'>
 				<div>
 					<input
-						type='email'
-						name='email'
-						id='email'
-						placeholder='Email'
-						onChange={(e) => setRegisterEmail(e.target.value)}
+						type='username'
+						name='username'
+						id='username'
+						placeholder='Username'
+						onChange={(e) => setRegisterUsername(e.target.value)}
 						required
 					/>
 				</div>
@@ -47,6 +47,7 @@ function Register() {
 					/>
 				</div>
 
+				{/* REPEAT PASSWORD FIELD
 				<div>
 					<input
 						type='password'
@@ -56,10 +57,10 @@ function Register() {
 						required
 					/>
 				</div>
+				*/}
 
 				<button onClick={register}>Register</button>
-				
-			</form>
+			</div>
 			<div className='login-register-link'>
 				<a href='/login'>
 					<u>Login</u>
