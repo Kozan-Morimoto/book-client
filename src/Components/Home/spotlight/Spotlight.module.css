@@ -26,7 +26,7 @@
     background-color: var(--dry-porcelain);
 }
 
-.spotlight .card-title {
+.spotlight .cardTitle {
     display: inline-block;
     color: var(--dark-clay);
     font-family: var(--f-serif-display);
@@ -35,7 +35,7 @@
     margin-left: 10px;
 }
 
-.card-cover {
+.cardCover {
     display: block;
     margin: 30px auto;
 }

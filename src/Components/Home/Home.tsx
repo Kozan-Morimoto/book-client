@@ -1,13 +1,14 @@
 import React from 'react'
-import './Home.css'
+import '../../GlobalStyles.css'
+import HomeCSS from './Home.module.css'
 import Spotlight from './spotlight/Spotlight'
 
 function Home() {
 	return (
-		<div className='home'>
-			<div className='top'>
-				<div className='main-poster'></div>
-				<a className='top-btn' href='#'>
+		<div className={HomeCSS.home}>
+			<div className={HomeCSS.top}>
+				<div className={HomeCSS.mainPoster}></div>
+				<a className={HomeCSS.topBtn} href='#'>
 					Begin your story {'>'}
 				</a>
 			</div>

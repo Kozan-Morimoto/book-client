@@ -1,17 +1,17 @@
 import React from 'react'
-import './Spotlight.css'
+import SpotlightCSS from './Spotlight.module.css'
 import kingsRespiteCover from '../../../assets/kings-respite-cover.jpg'
 
 function Spotlight() {
   return (
-    <div className='spotlight'>
+    <div className={SpotlightCSS.spotlight}>
         <h1>SPOTLIGHT</h1>
         <hr />
-        <div className='card'>
-            <h3 className='card-title'>
+        <div className={SpotlightCSS.card}>
+            <h3 className={SpotlightCSS.cardTitle}>
                 The King's Respite
             </h3>
-            <img src={kingsRespiteCover} alt="Cover" className='card-cover'/>
+            <img src={kingsRespiteCover} alt="Cover" className={SpotlightCSS.cardCover}/>
         </div>
     </div>
   )

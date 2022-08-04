@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Login.css'
+import LoginRegisterCSS from './LoginRegister.module.css'
 import Axios from 'axios'
 
 function Login() {
@@ -15,7 +15,7 @@ function Login() {
 				password: loginPassword,
 			},
 			withCredentials: true,
-			url: 'http://localhost:5000/login',
+			url: 'http://localhost:5000/auth/login',
 		}).then((res) => console.log(res))
 	}
 	const getUser = () => {
@@ -36,17 +36,17 @@ function Login() {
 			data: {
 				loggedIn: true
 			},
-			url: 'http://localhost:5000/logout'
+			url: 'http://localhost:5000/auth/logout'
 		}).then(res => console.log('Logged out'))
 	}
 
 	return (
-		<div className='login-register'>
-			<div className='login-register-greeting'>
+		<div className={LoginRegisterCSS.loginRegister}>
+			<div className={LoginRegisterCSS.greeting}>
 				<h1>Continue your legend.</h1>
 			</div>
 
-			<div className='input-container'>
+			<div className={LoginRegisterCSS.inputContainer}>
 				<div>
 					<input
 						type='text'
@@ -71,7 +71,7 @@ function Login() {
 
 				<button onClick={login}>Login</button>
 			</div>
-			<div className='login-register-link'>
+			<div className={LoginRegisterCSS.link}>
 				<a href='/register'>
 					<u>Register</u>
 				</a>

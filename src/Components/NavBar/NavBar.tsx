@@ -1,33 +1,32 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes as faX } from '@fortawesome/free-solid-svg-icons'
-
-import './NavBar.css'
+import NavBarCSS from './NavBar.module.css'
 
 function NavBar() {
 	return (
-		<div className='navbar'>
-			<div className='bar'>
-				<a href="/"><div className='logo'>Logo</div></a>
+		<div className={NavBarCSS.navBar}>
+			<div className={NavBarCSS.bar}>
+				<a href="/"><div className={NavBarCSS.logo}>Logo</div></a>
 
-				<button className='toggle-a' id='toggle-a'>
-					<FontAwesomeIcon icon={faBars} className='fa-bars' />
+				<button className={NavBarCSS.toggleA} id='toggle-a'>
+					<FontAwesomeIcon icon={faBars} className={NavBarCSS.faBars} />
 				</button>
 			</div>
-			<nav className='nav' id='nav'>
-				<ul className='nav-list'>
-					<li className='nav-item'>
+			<nav className={NavBarCSS.nav} id='nav'>
+				<ul className={NavBarCSS.navList}>
+					<li className={NavBarCSS.navItem}>
 						<a href='/'>Home</a>
 					</li>
-					<li className='nav-item'>
+					<li className={NavBarCSS.navItem}>
 						<a href='#'>Explore</a>
 					</li>
-					<li className='nav-item'>
+					<li className={NavBarCSS.navItem}>
 						<a href='/login'>Login</a>
 					</li>
 
-					<button className='toggle-b' id='toggle-b'>
-						<FontAwesomeIcon icon={faX} className='fa-times' />
+					<button className={NavBarCSS.toggleB} id='toggle-b'>
+						<FontAwesomeIcon icon={faX} className={NavBarCSS.faTimes} />
 					</button>
 				</ul>
 			</nav>

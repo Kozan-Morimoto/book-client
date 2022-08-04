@@ -2,7 +2,7 @@
     height: 100%;
 }
 
-.main-poster {
+.mainPoster {
     display: block;
     width: 100vw;
     height: 500px;
@@ -10,7 +10,7 @@
     background-color: var(--wet-porcelain);
 }
 
-.top-btn {
+.topBtn {
     position: relative;
     margin-top: 30px;
     float: right;

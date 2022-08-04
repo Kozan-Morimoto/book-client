@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import '../Login/Login.css'
-import './Register.css'
+import LoginRegisterCSS from './LoginRegister.module.css'
+import '../../GlobalStyles.css'
 import Axios from 'axios'
 
 function Register() {
@@ -20,11 +20,11 @@ function Register() {
 	}
 
 	return (
-		<div className='login-register'>
-			<div className='login-register-greeting'>
+		<div className={LoginRegisterCSS.loginRegister}>
+			<div className={LoginRegisterCSS.greeting}>
 				<h1>Begin your legend.</h1>
 			</div>
-			<div className='input-container'>
+			<div className={LoginRegisterCSS.inputContainer}>
 				<div>
 					<input
 						type='username'
@@ -61,7 +61,7 @@ function Register() {
 
 				<button onClick={register}>Register</button>
 			</div>
-			<div className='login-register-link'>
+			<div className={LoginRegisterCSS.link}>
 				<a href='/login'>
 					<u>Login</u>
 				</a>

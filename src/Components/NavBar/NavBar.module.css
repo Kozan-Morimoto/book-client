@@ -1,4 +1,4 @@
-.navbar {
+.navBar {
 	position: fixed;
 }
 
@@ -18,7 +18,7 @@
 	margin-left: 10px;
 }
 
-.toggle-a {
+.toggleA {
     background-color: var(--dry-porcelain);
     border: none;
 	color: var(--dark-clay);
@@ -26,7 +26,7 @@
 	margin-right: 20px;
 }
 
-.toggle-b {
+.toggleB {
     background-color: inherit;
     border: none;
     color: var(--dry-porcelain);
@@ -47,7 +47,7 @@
     transform: translateY(-100%);
 }
 
-.nav-list {
+.navList {
 	padding: 0;
     padding-top: 20px;
 	margin: 0;
@@ -56,15 +56,15 @@
 	align-items: center;
 }
 
-.nav-item {
+.navItem {
 	list-style-type: none;
 	font-size: 20px;
 }
 
-.nav-item a {
+.navItem a {
 	text-decoration: none;
 }
 
-.nav-item, .nav-item :active, .nav-item :visited {
+.navItem, .navItem :active, .navItem :visited {
 	color: var(--dry-porcelain);
 }
