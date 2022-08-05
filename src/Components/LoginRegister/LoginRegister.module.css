@@ -34,12 +34,12 @@
     background-color: var(--input-grey-hover);
 }
 
-.loginRegister button {
+.loginRegister .btn {
     display: block;
-    margin: 30px auto;
+    margin: 30px auto 0;
     height: 50px;
     width: 200px;
-    border-radius: 30px;
+    border-radius: 5px;
     border: none;
     background-color: var(--wet-porcelain);
     color: var(--dark-clay);
@@ -47,14 +47,9 @@
     font-size: 20px;
 }
 
-.loginRegister button:hover {
+.loginRegister .registerBtn:hover {
     background-color: var(--dry-porcelain);
     color: var(--light-clay);
-}
-
-.loginRegister button:hover {
-    color: var(--light-clay);
-    background-color: var(--dry-porcelain);
 }
 
 .link {
@@ -65,8 +60,47 @@
 .link a {
     color: var(--subtle-grey);
     font-family: var(--f-sans);
+    padding: 10px;
 }
 
 .link a:hover {
     color: var(--dry-porcelain);
+}
+
+.OAuthContainer {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.OAuthBtn {
+    width: 250px;
+    height: 50px;
+    margin: 6px;
+    font-size: 15px;
+    font-family: var(--f-sans);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+}
+
+.OAuthBrand {
+    font-size: 20px;
+}
+
+.OAuthBtn p {
+    padding-right: 5px;
+}
+
+.googleBtn {
+    background-color: #4285F4;
+    color: #FFF;
+}
+
+.githubBtn {
+    background-color: #333;
+    color: #ccc;
 }

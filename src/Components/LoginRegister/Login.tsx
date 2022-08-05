@@ -1,11 +1,20 @@
 import React, { useState } from 'react'
-import LoginRegisterCSS from './LoginRegister.module.css'
+import styles from './LoginRegister.module.css'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faGoogle, faGithub} from '@fortawesome/free-brands-svg-icons'
 import Axios from 'axios'
 
 function Login() {
 	const [loginUsername, setLoginUsername] = useState('')
 	const [loginPassword, setLoginPassword] = useState('')
 	const [data, setData] = useState(null)
+
+	const googleLogin = () => {
+		window.open('http://localhost:5000/auth/google', '_self')
+	}
+	const githubLogin = () => {
+		window.open('http://localhost:5000/auth/github', '_self')
+	}
 
 	const login = () => {
 		Axios({
@@ -41,12 +50,12 @@ function Login() {
 	}
 
 	return (
-		<div className={LoginRegisterCSS.loginRegister}>
-			<div className={LoginRegisterCSS.greeting}>
+		<div className={styles.loginRegister}>
+			<div className={styles.greeting}>
 				<h1>Continue your legend.</h1>
 			</div>
 
-			<div className={LoginRegisterCSS.inputContainer}>
+			<div className={styles.inputContainer}>
 				<div>
 					<input
 						type='text'
@@ -69,9 +78,19 @@ function Login() {
 					/>
 				</div>
 
-				<button onClick={login}>Login</button>
+				<button className={styles.btn} onClick={login}>Login</button>
 			</div>
-			<div className={LoginRegisterCSS.link}>
+			<div className={styles.OAuthContainer}>
+				<div className={`${styles.googleBtn} ${styles.OAuthBtn}`} onClick={googleLogin}>
+					<FontAwesomeIcon icon={faGoogle} className={styles.OAuthBrand} />
+					<p>Login with Google</p>
+				</div>
+				<div className={`${styles.githubBtn} ${styles.OAuthBtn}`} onClick={githubLogin}>
+					<FontAwesomeIcon icon={faGithub} className={styles.OAuthBrand} />
+					<p>Login with GitHub</p>
+				</div>
+			</div>
+			<div className={styles.link}>
 				<a href='/register'>
 					<u>Register</u>
 				</a>
@@ -79,6 +98,7 @@ function Login() {
 
 			<div>
 				<button onClick={getUser}>Get user</button>
+				{/*The logout btn appears after pressing get user. */}
 				{data ? (
 					<div>
 						<button onClick={logout}>Logout</button>

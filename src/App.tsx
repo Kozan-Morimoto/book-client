@@ -4,8 +4,13 @@ import Navbar from './Components/NavBar/NavBar'
 import Home from './Components/Home/Home'
 import Login from './Components/LoginRegister/Login'
 import Register from './Components/LoginRegister/Register'
+import { myContext } from './Context'
+import { useContext } from 'react'
+
 
 function App() {
+	const userObject = useContext(myContext)
+	
 	return (
 		<Router>
 			<Navbar />

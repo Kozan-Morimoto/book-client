@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-import LoginRegisterCSS from './LoginRegister.module.css'
+import styles from './LoginRegister.module.css'
 import '../../GlobalStyles.css'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faGoogle, faGithub} from '@fortawesome/free-brands-svg-icons'
 import Axios from 'axios'
 
 function Register() {
@@ -19,12 +21,19 @@ function Register() {
 		}).then((res) => console.log(res))
 	}
 
+	const googleRegister = () => {
+		window.open('http://localhost:5000/auth/google', '_self')
+	}
+	const githubRegister = () => {
+		window.open('http://localhost:5000/auth/github', '_self')
+	}
+
 	return (
-		<div className={LoginRegisterCSS.loginRegister}>
-			<div className={LoginRegisterCSS.greeting}>
+		<div className={styles.loginRegister}>
+			<div className={styles.greeting}>
 				<h1>Begin your legend.</h1>
 			</div>
-			<div className={LoginRegisterCSS.inputContainer}>
+			<div className={styles.inputContainer}>
 				<div>
 					<input
 						type='username'
@@ -59,9 +68,19 @@ function Register() {
 				</div>
 				*/}
 
-				<button onClick={register}>Register</button>
+				<button className={styles.btn} onClick={register}>Register</button>
 			</div>
-			<div className={LoginRegisterCSS.link}>
+			<div className={styles.OAuthContainer}>
+				<div className={`${styles.googleBtn} ${styles.OAuthBtn}`} onClick={googleRegister}>
+					<FontAwesomeIcon icon={faGoogle} className={styles.OAuthBrand} />
+					<p>Register with Google</p>
+				</div>
+				<div className={`${styles.githubBtn} ${styles.OAuthBtn}`} onClick={githubRegister}>
+					<FontAwesomeIcon icon={faGithub} className={styles.OAuthBrand} />
+					<p>Register with GitHub</p>
+				</div>
+			</div>
+			<div className={styles.link}>
 				<a href='/login'>
 					<u>Login</u>
 				</a>
