@@ -9,7 +9,6 @@ import { useContext } from 'react'
 
 
 function App() {
-	const userObject = useContext(myContext)
 	
 	return (
 		<Router>

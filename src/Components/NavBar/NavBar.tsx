@@ -19,7 +19,7 @@ function NavBar() {
 						<a href='/'>Home</a>
 					</li>
 					<li className={NavBarCSS.navItem}>
-						<a href='#'>Explore</a>
+						<a href='/'>Explore</a>
 					</li>
 					<li className={NavBarCSS.navItem}>
 						<a href='/login'>Login</a>
