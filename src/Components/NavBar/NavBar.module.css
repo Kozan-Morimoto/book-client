@@ -1,70 +1,21 @@
 .navBar {
-	position: fixed;
+	height: 50px;
 }
 
-.bar {
-	background-color: var(--dry-porcelain);
-	top: 0;
-	height: 80px;
-	width: 100vw;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+.navBar span {
+	margin-right: 40px;
 }
 
-.logo {
-	color: var(--dark-clay);
-	font-size: 30px;
-	margin-left: 10px;
-}
-
-.toggleA {
-    background-color: var(--dry-porcelain);
-    border: none;
-	color: var(--dark-clay);
-	font-size: 20px;
-	margin-right: 20px;
-}
-
-.toggleB {
-    background-color: inherit;
-    border: none;
-    color: var(--dry-porcelain);
-    font-size: 30px;
-    margin-left: 20px;
-}
-
-.nav {
-	height: 80px;
-	background-color: var(--dark-clay);
-	transform: translateY(-200%);
-	transition: transform ease 400ms;
-    display: block;
-	font-family: var(--f-sans);
-}
-
-.nav.active {
-    transform: translateY(-100%);
-}
-
-.navList {
-	padding: 0;
-    padding-top: 20px;
+.navBar ul {
+	height: 100%;
 	margin: 0;
+	padding: 0;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-}
-
-.navItem {
-	list-style-type: none;
-	font-size: 20px;
-}
-
-.navItem a {
 	text-decoration: none;
-}
-
-.navItem, .navItem :active, .navItem :visited {
-	color: var(--dry-porcelain);
+	list-style: none;
+	font-size: 15px;
+	font-family: var(--f-sans-a);
+	color: var(--dark-clay);
 }
