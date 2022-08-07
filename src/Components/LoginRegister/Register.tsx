@@ -17,15 +17,15 @@ function Register() {
 				password: registerPassword
 			},
 			withCredentials: true,
-			url: 'http://localhost:5000/auth/register',
+			url: 'https://blockchain-monogatary-server.herokuapp.com/auth/register',
 		}).then((res) => console.log(res))
 	}
 
 	const googleRegister = () => {
-		window.open('http://localhost:5000/auth/google', '_self')
+		window.open('https://blockchain-monogatary-server.herokuapp.com/auth/google', '_self')
 	}
 	const githubRegister = () => {
-		window.open('http://localhost:5000/auth/github', '_self')
+		window.open('https://blockchain-monogatary-server.herokuapp.com/auth/github', '_self')
 	}
 
 	return (

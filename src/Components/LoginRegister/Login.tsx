@@ -10,10 +10,10 @@ function Login() {
 	const [data, setData] = useState(null)
 
 	const googleLogin = () => {
-		window.open('http://localhost:5000/auth/google', '_self')
+		window.open('https://blockchain-monogatary-server.herokuapp.com/auth/google', '_self')
 	}
 	const githubLogin = () => {
-		window.open('http://localhost:5000/auth/github', '_self')
+		window.open('https://blockchain-monogatary-server.herokuapp.com/auth/github', '_self')
 	}
 
 	const login = () => {
@@ -24,14 +24,14 @@ function Login() {
 				password: loginPassword,
 			},
 			withCredentials: true,
-			url: 'http://localhost:5000/auth/login',
+			url: 'https://blockchain-monogatary-server.herokuapp.com/auth/login',
 		}).then((res) => console.log(res))
 	}
 	const getUser = () => {
 		Axios({
 			method: 'GET',
 			withCredentials: true,
-			url: 'http://localhost:5000/user',
+			url: 'https://blockchain-monogatary-server.herokuapp.com/user',
 		}).then((res) => {
 			console.log(res.data)
 			setData(res.data)
@@ -45,7 +45,7 @@ function Login() {
 			data: {
 				loggedIn: true
 			},
-			url: 'http://localhost:5000/auth/logout'
+			url: 'https://blockchain-monogatary-server.herokuapp.com/auth/logout'
 		}).then(res => console.log('Logged out'))
 	}
 

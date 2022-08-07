@@ -6,7 +6,7 @@ function Context(props: any) {
 	const [userObject, setUserObject] = useState<any>()
 
 	useEffect(() => {
-		Axios.get('http://localhost:5000/user', { withCredentials: true }).then(
+		Axios.get('https://blockchain-monogatary-server.herokuapp.com/user', { withCredentials: true }).then(
 			(res: AxiosResponse) => {
 				if (res.data) {
 					setUserObject(res.data)
