@@ -3,6 +3,7 @@ import styles from './LoginRegister.module.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faGoogle, faGithub} from '@fortawesome/free-brands-svg-icons'
 import Axios from 'axios'
+import { Link } from 'react-router-dom'
 
 function Login() {
 	const [loginUsername, setLoginUsername] = useState('')
@@ -91,9 +92,9 @@ function Login() {
 				</div>
 			</div>
 			<div className={styles.link}>
-				<a href='/register'>
+				<Link to='/register'>
 					<u>Register</u>
-				</a>
+				</Link>
 			</div>
 
 			<div>

@@ -4,6 +4,7 @@ import '../../GlobalStyles.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faGoogle, faGithub} from '@fortawesome/free-brands-svg-icons'
 import Axios from 'axios'
+import { Link } from 'react-router-dom'
 
 function Register() {
 	const [registerUsername, setRegisterUsername] = useState('')
@@ -81,9 +82,9 @@ function Register() {
 				</div>
 			</div>
 			<div className={styles.link}>
-				<a href='/login'>
+				<Link to='/login'>
 					<u>Login</u>
-				</a>
+				</Link>
 			</div>
 		</div>
 	)

@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { myContext } from '../../Context'
 import '../../GlobalStyles.css'
 import { IUser } from '../../types/maintypes'
@@ -11,13 +12,13 @@ function Home() {
 		<div className={styles.home}>
 			<div className={styles.top}>
 					<div className={styles.mainPoster}></div>
-				<a className={styles.topBtn} href='/register'>
+				<Link className={styles.topBtn} to='/register'>
 					{context ? (
 						<p>Welcome back {context.username}</p>
 					) : (
 						<p>Begin your story {'>'}</p>
 					)}
-				</a>
+				</Link>
 			</div>
 
 			<Spotlight />
